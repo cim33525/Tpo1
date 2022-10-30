@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins">
+    <link rel="icon" href="Pictures/123logo.ico">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>123 Matematicas</title>
+
+</head>
+
+
+<body>
+
+    <header>
+        <img src="Pictures/123logo.png" alt="logo123" id="logo123">
+        <div class="group">
+            <ul class="navigation">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="ejercicios.html">EJERCICIOS</a></li>
+                <li><a href="nuestraInstitucion.html">NUESTRA INSTITUCION</a></li>
+                <li><a href="contacto.html">CONTACTANOS</a></li>
+            </ul>
+            <ion-icon name="menu-outline" class="menuH"></ion-icon>
+        </div>
+    </header>
+
+    <script>
+        let navigation = document.querySelector('.navigation');
+        let menuH = document.querySelector('.menuH');
+        let header = document.querySelector('header');
+        menuH.onclick = function(){
+            header.classList.toggle('open');
+        }
+    </script>   
+    
+    <h1>123 MATEMATICAS</h1>
+    <h2>APRENDIZAJE HECHO A TU MEDIDA</h2>
+
+    <script src="./scripts.js"></script>
+    <div class="slider-frame">
+        <ul> 
+            <li><img src="Pictures/img1.jpg" alt="" ></li>
+            <li><img src="Pictures/img2.jpg" alt="" ></li>
+            <li><img src="Pictures/img3.jpg" alt="" ></li>
+            <li><img src="Pictures/img4.png" alt="" ></li>
+        </ul>
+    </div>
+
+    <div class="aprende">
+        <p>Mejora tus habilidades matemáticas con nuestros ejercicios</p>
+    </div>
+    
+    <section>
+        <div class="contenedorAnios">
+            <a href="./ejercicios.html"><img src="pictures/primer_grado.jpg" alt="primer_grado" class="primero" onmouseover="hover1(this);" onmouseleave="unhover1(this);"></a>
+            <a href="#"><img src="pictures/segundo_grado.jpg" alt="segundo_grado" class="segundo" onmouseover="hover2(this);" onmouseleave="unhover2(this);"></a>
+            <a href="#"><img src="pictures/tercer_grado.jpg" alt="tercer_grado" class="tercero" onmouseover="hover3(this);" onmouseleave="unhover3(this);"></a>
+        </div>
+    </section>
+
+    <h3>Conoce algunas experiencias de nuestros usuarios</h3>
+    <div class="experiencias">
+        <div class="cuadroExp">
+            <div class="fotoRostro1">
+            </div>
+            <div class="exp">
+                <p>Con la ayuda de 123 Matemáticas mis hijos comenzaron a practicar todos los días las actividades que ven en el colegio</p>
+            </div>
+        </div>
+        <div class="cuadroExp">
+            <div class="fotoRostro2">
+            </div>
+            <div class="exp">
+                <p>Como profesor de primaria me parecen buenos contenidos, suelo recomendarle la página a mis alumnos como complemento de lo que vemos en las clases</p>
+            </div>
+        </div>
+    </div>
+
+    <h4>Numeros Animados</h4>
+
+    <video id="gif" autoplay="true" loop="true"></video>
+    
+    <script>
+
+        this.keyword = "numero";
+        this.endpoint = "http://api.giphy.com/v1/gifs";
+        this.api_key = "esP568RSslJ64tvYF9J5ORbv9gSJr5Ix";
+    
+    
+        function getGifUrl(callback){
+        var xhr = new XMLHttpRequest();
+    
+        xhr.open("GET",this.endpoint+"/translate?api_key="+this.api_key+"&s="+this.keyword);
+    
+        xhr.responseType = "json";
+    
+        xhr.onload = function(){
+            document.getElementById('gif').src = this.response.data.images.original.mp4;
+        }
+        
+        xhr.send();
+    }
+    
+    getGifUrl();
+    
+    </script>
+
+</body>
+    
+    <footer>
+        <svg viewBox="0 -20 700 110" width="100%" height="110" preserveAspectRatio="none">
+          <path transform="translate(0, -20)" d="M0,10 c80,-22 240,0 350,18 c90,17 260,7.5 350,-20 v50 h-700" fill="#173042" />
+          <path d="M0,10 c80,-18 230,-12 350,7 c80,13 260,17 350,-5 v100 h-700z" fill="#173042"/>
+        </svg>
+    </footer>
+    <div class="foot">
+        <div class="bloque1">
+            <div><p>SITEMAP</p></div>
+            <div class="sitemaplist">
+                <ul>
+                <li><a href="ejercicios.html">EJERCICIOS</a></li>
+                <li><a href="nuestraInstitucion.html">INSTITUCION</a></li>
+                <li><a href="contacto.html">CONTACTANOS</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bloque2">
+            <div><p>REDES SOCIALES</p></div>
+            <div>
+            <a href="https://facebook.com" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="https://twitter.com" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="https://instagram.com" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="https://tiktok.com" target="_blank"><ion-icon name="logo-tiktok"></ion-icon></a>
+            </div>
+        </div>
+        <div class="bloque3">
+            <div><p>© 2022 123 MATEMATICAS LCC All right reserved</p></div>
+            <div>
+                
+            </div>
+        </div>
+    </div>
+ 
+
+</html>

@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    position: relative;
+    min-height: 100%;
+}
+body{
+    background:#236477 ;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+header{
+    position: fixed;
+    font-family: "Poppins", sans-serif;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #173042;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo123{
+    height: 80px;
+}
+
+.group{
+    display: flex;
+    align-items: center;
+}
+
+header ul{
+    position: relative;
+    display: flex;
+    gap: 30px;
+}
+
+header ul li{
+    list-style: none;
+}
+
+header ul li a{
+    position: relative;
+    text-decoration: none;
+    font-size: 1em;
+    color:whitesmoke;
+    letter-spacing: 0.2em;
+}
+
+header ul li a::before{
+    content: "";
+    position:absolute;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background: whitesmoke;
+    transform: scaleX(0);
+    transition: transform 0.5s ease-in-out;
+    transform-origin: right;
+}
+
+a:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+.menuH{
+   color: whitesmoke;
+   position: relative;
+   display: none;
+}
+
+@media (max-width: 800px){
+    /*Despliegue de menu hamburger*/    
+        .menuH{
+            position: absolute;
+            display: block;
+            font-size: 2em;
+            cursor: pointer;
+            z-index: 10;
+        }
+        header .navigation{
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;
+            left: 100%;
+        }
+        header.open .navigation{
+            top: 80px;
+            opacity: 1;
+            visibility: visible;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            background: #173042;
+            width: 100%;
+            height: calc(100vh - 80px);
+            padding: 40px;
+            border-top: 1px solid rgba(0,0,0,0.05);  
+        }
+        header.open .navigation li a{
+            font-size: 1.25em;
+        }
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  bottom: 0px;
+  overflow: hidden;
+}
+
+.foot{
+    display: flex;
+    width: 100%;
+    height: 100px;
+    background-color: #173042;
+    position: absolute;
+    bottom: 0px;
+    justify-content: center;
+}
+.bloque1, .bloque2, .bloque3{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 0.2em;
+    color: whitesmoke;
+    justify-content: center;
+    align-items: center;
+    width: 33.3%;
+    height: 80px;
+    background-color: #173042
+}
+.bloque2 a{
+    font-size: 1.5em;
+}
+.sitemaplist{
+    font-size:x-small;
+    text-align: center;
+}
+.pp{
+    margin-top: 200em;
+}
+
+.bloque1 li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.contacto{
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    width: 50em;
+    padding: 30px;
+    transform: translate(-50%, -50%);
+    background: #242026;
+    /*box-shadow: 0 15px 25px rgba(143, 124, 236, 0.7);*/
+    border-radius: 10px;
+}
+.contacto h2{
+    font-family: Walter Turncoat, sans-serif;
+    letter-spacing: 0.5em;
+    margin: 0 0 30px;
+    padding: 0;
+    color: whitesmoke;
+    text-align: center;
+}
+.contacto .usuario input, textarea{
+    position: relative;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: whitesmoke;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid whitesmoke;
+    outline: none;
+    background: transparent;
+}
+textarea{
+    border: 1px solid;
+    padding-left: 10px;
+    resize: none;
+}
+.contacto .usuario label{
+    position: relative;
+    left: 0;
+    top: -60px;
+    padding: 10px 0;
+    font-size: 16px;
+    color: whitesmoke;
+    pointer-events: none;
+    transition: .5s;
+}
+.contacto .usuario input:focus~label,
+.contacto .usuario input:valid~label {
+    top: -85px;
+    left: 0;
+    color: #8f7cec;
+    font-size: 12px;
+}
+
+.botonEnviar{
+    padding: 5px 10px;
+    text-align: center;
+    color: #cbbdbb;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    letter-spacing: 4px;
+    border: 1px solid #8f7cec;
+    margin: auto;
+}
+
+.botonEnviar:hover{
+    background: #8f7cec;
+    color: whitesmoke;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #8f7cec, 0 0 25px #8f7cec, 0 0 50px #8f7cec, 0 0 100px #8f7cec ;
+}
+
+.sendAndReset{
+    padding: 5px 10px;
+    text-align: center;
+    background: transparent;
+    color: #cbbdbb;
+    font-size: 16px;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    letter-spacing: 4px;
+    margin: auto;
+    border-style: none;
+}

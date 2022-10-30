@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesEjercicios.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Walter+Turncoat">
+    <link rel="icon" href="Pictures/123logo.ico">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="scriptsEjercicios.js"></script>
+    <title>123 Matematicas</title>
+
+</head>
+
+<body>
+
+    <header>
+        <img src="Pictures/123logo.png" alt="logo123" id="logo123">
+        <div class="group">
+            <ul class="navigation">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="ejercicios.html">EJERCICIOS</a></li>
+                <li><a href="nuestraInstitucion.html">NUESTRA INSTITUCION</a></li>
+                <li><a href="contacto.html">CONTACTANOS</a></li>
+            </ul>
+            <ion-icon name="menu-outline" class="menuH"></ion-icon>
+        </div>
+    </header>
+
+    <script>
+        let navigation = document.querySelector('.navigation');
+        let menuH = document.querySelector('.menuH');
+        let header = document.querySelector('header');
+        menuH.onclick = function(){
+            header.classList.toggle('open');
+        }
+    </script>
+
+    <div class="pizarra">
+        <div class="container">
+            <div class="titulo">
+                <h2>Practica con estos ejercicios :)</h2>
+            </div>
+            <div class="subTitulo1">
+                <p>Sumar y restar</p>
+            </div>
+            <div class="subTitulo2">
+                <p>Operaciones mixtas</p>
+            </div>
+            <div class="subTitulo3">
+                <p>Roconocer figuras geometricas</p>
+            </div>
+            <div class="controlColumna1">
+                <button onclick="CorregirUno()">Corregir</button>
+            </div>
+            <div class="controlColumna2">
+                <button onclick="CorregirDos()">Corregir</button>
+            </div>
+            <div class="controlColumna3">
+                <button onclick="CorregirTres()">Corregir</button>
+            </div>
+            <div class="columna1">
+                <ul>
+                    <!-- En id la primer palabra hace referncia al Año la segunda a la columna y la tercera al ejercicio --> 
+                    <li>10 + 8</li><input type="number" id="PrimeroUnoUno" name="" min="0" max="1000">
+                    <li>25 + 11</li><input type="number" id="PrimeroUnoDos" name="" min="0" max="1000">
+                    <li>54 + 13</li><input type="number" id="PrimeroUnoTres" name="" min="0" max="1000">
+                    <li>25 + 24</li><input type="number" id="PrimeroUnoCuatro" name="" min="0" max="1000">
+                    <li>56 - 3</li><input type="number" id="PrimeroUnoCinco" name="" min="0" max="1000">
+                    <li>17 - 5</li><input type="number" id="PrimeroUnoSeis" name="" min="0" max="1000">
+                    <li>44 - 12</li><input type="number" id="PrimeroUnoSiete" name="" min="0" max="1000">
+                    <li>70 - 57</li><input type="number" id="PrimeroUnoOcho" name="" min="0" max="1000">
+                </ul>
+            </div>
+            <div class="columna2">
+                <ul>
+                    <li>20 + 5 - 4</li><input type="number" id="PrimeroDosUno" name="" min="0" max="1000">
+                    <li>48 - 3 + 10</li><input type="number" id="PrimeroDosDos" name="" min="0" max="1000">
+                    <li>54 - 5 + 10</li><input type="number" id="PrimeroDosTres" name="" min="0" max="1000">
+                    <li>68 + 8 - 8</li><input type="number" id="PrimeroDosCuatro" name="" min="0" max="1000">
+                    <li>77 + 6 - 10</li><input type="number" id="PrimeroDosCinco" name="" min="0" max="1000">
+                    <li>15 - 5 + 20</li><input type="number" id="PrimeroDosSeis" name="" min="0" max="1000">
+                    <li>50 + 40 - 30</li><input type="number" id="PrimeroDosSiete" name="" min="0" max="1000">
+                </ul>
+            </div>
+            <div class="columna3">
+                <ul>
+                    <li><ion-icon name="square-outline"></ion-icon></li><input type="text" id="PrimeroTresUno" name="">
+                    <li><ion-icon name="ellipse-outline"></ion-icon></li></li><input type="text" id="PrimeroTresDos" name="">
+                    <li><ion-icon name="triangle-outline"></ion-icon></li></li><input type="text" id="PrimeroTresTres" name="">
+                </ul>    
+            </div>
+        </div>
+    </div>
+
+    
+    
+
+</body>
+    
+    <footer>
+        <svg viewBox="0 -20 700 110" width="100%" height="110" preserveAspectRatio="none">
+          <path transform="translate(0, -20)" d="M0,10 c80,-22 240,0 350,18 c90,17 260,7.5 350,-20 v50 h-700" fill="#173042" />
+          <path d="M0,10 c80,-18 230,-12 350,7 c80,13 260,17 350,-5 v100 h-700z" fill="#173042"/>
+        </svg>
+    </footer>
+    <div class="foot">
+        <div class="bloque1">
+            <div><p>SITEMAP</p></div>
+            <div class="sitemaplist">
+                <ul>
+                <li><a href="ejercicios.html">EJERCICIOS</a></li>
+                <li><a href="nuestraInstitucion.html">INSTITUCION</a></li>
+                <li><a href="contacto.html">CONTACTANOS</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bloque2">
+            <div><p>REDES SOCIALES</p></div>
+            <div>
+            <a href="https://facebook.com" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="https://twitter.com" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="https://instagram.com" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="https://tiktok.com" target="_blank"><ion-icon name="logo-tiktok"></ion-icon></a>
+            </div>
+        </div>
+        <div class="bloque3">
+            <div><p>© 2022 123 MATEMATICAS LCC All right reserved</p></div>
+            <div>
+                
+            </div>
+        </div>
+    </div>
+ 
+
+</html>
